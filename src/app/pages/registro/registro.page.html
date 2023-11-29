@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio" text="Volver">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Registro</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+            <ion-input [(ngModel)]="nombre" label="Nombre" placeholder="Nombre Apellido"></ion-input>
+
+            <ion-input label="Correo Electrónico" type="email" placeholder="correo@electronico.com"
+              [(ngModel)]="usuario"  errorText="Correo electrónico inválido"></ion-input>
+
+            <ion-input [(ngModel)]="contrasena" label="Contraseña" type="password" value="password1"
+              helperText="Ingrese una contraseña de al menos 6 caracteres." >
+            </ion-input>
+
+            <ion-input [(ngModel)]="carrera" label="Carrera" placeholder=""></ion-input>
+
+            <ion-select (ionChange)="cargarComuna()" placeholder="Seleccione region" [(ngModel)]="regionSel">
+              <ion-select-option *ngFor="let i of regiones" [value]="i.id">{{i.nombre}}</ion-select-option>
+            </ion-select>
+
+            <ion-select  placeholder="Seleccione comuna" [(ngModel)]="comunaSel">
+              <ion-select-option *ngFor="let i of comunas" [value]="i.id">{{i.nombre}}</ion-select-option>
+            </ion-select>
+ 
+      </ion-card-content>
+      
+    </ion-card>
+  <ion-button (click)="cargandoRegistro()">Registrarse</ion-button>
+</ion-content>

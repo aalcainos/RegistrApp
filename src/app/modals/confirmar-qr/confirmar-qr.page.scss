@@ -1,0 +1,38 @@
+ion-card-title {
+    font-family: titulo;
+    color: #25291C;
+}
+
+ion-card {
+    --background: #EEEBD0;
+}
+
+ion-content {
+    --background: #815E5B;
+}
+
+ion-title {
+    font-family: titulo;
+    color: #25291C;
+}
+
+ion-toolbar {
+    --background: #EEEBD0;
+    color: #815E5B;
+}
+
+ion-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+ion-card-content {
+    color: #25291C
+}
+
+ion-button {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

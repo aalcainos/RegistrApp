@@ -1,0 +1,23 @@
+Prueba realizada en menu.page.spect.ts
+
+ beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers:[ModalController, AngularDelegate],
+      imports:[AngularFireModule.initializeApp(environment.firebaseConfig)]
+    });
+    fixture = TestBed.createComponent(MenuPage);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    // Prueba realizada personalizada
+    fixure2 = TestBed.createComponent(ConfirmarQrPage);
+    modal = fixure2.componentInstance;
+    fixure2.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+    // Prueba realizada personalizada
+    expect(modal).toBeTruthy();
+  });
+
+La prueba busca comprobar si el modal el componente "ConfirmarQrPAge" fue creado dentro de la aplicación.

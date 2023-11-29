@@ -1,0 +1,38 @@
+ion-card{
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+}
+
+ion-card-title{
+    font-family: titulo;
+    color: #25291C;
+}
+
+ion-card{
+    --background: #EEEBD0;
+}
+
+ion-content{
+    --background: #FFA5A5;
+}
+
+ion-input{
+    color: #25291C;
+
+}
+
+ion-checkbox{
+    color: #25291C;
+
+}
+
+ion-button{
+    --background: #815E5B;
+    --background-hover: #815E5B;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

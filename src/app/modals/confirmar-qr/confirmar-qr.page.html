@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon (click)="close()" name="close-outline" slot="end"></ion-icon>
+    <ion-title>confirmarQr</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let i of asisData">
+    <ion-card-header>
+      <ion-card-title>Detalle de Asistencia</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h3 id="text">
+        Lección: {{ i.leccion }} <br>
+        Asignatura: {{ i.asignatura }} <br>
+        Seccion: {{ i.seccion }} <br>
+        Docente: {{ i.docente }} <br>
+        Sala: {{ i.sala }} <br>
+        Fecha: {{ i.fecha }} <br>
+        Hora: {{ i.hora }}
+      </h3>
+    </ion-card-content>
+
+
+  </ion-card>
+  <ion-button (click)="saveAsis()" color="success"><ion-icon name="save-outline"></ion-icon>Guardar
+    asistencia</ion-button>
+  <ion-button (click)="copiarTexto()" color="secondary"><ion-icon name="copy-outline"></ion-icon>Copiar
+    información</ion-button>
+</ion-content>

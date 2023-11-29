@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+      text="Volver"
+      defaultHref="/menu">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Asistencias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <!-- <ion-card>
+    <ion-card-header>
+      <ion-card-title>Asignatura</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      fecha/hora
+      <ion-button routerLink="/asignatura" shape="round">Ver</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Asignatura</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      fecha/hora
+      <ion-button routerLink="/asignatura" shape="round">Ver</ion-button>
+    </ion-card-content>
+  </ion-card> -->
+  <!-- asistencias.page.html -->
+
+
+<ion-content>
+  <ion-card *ngFor="let i of asistencias; let x=index ">
+    <ion-card-header>
+      <ion-card-title>Asistencia N° {{x+1}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <b> Lección: {{ i.leccion }}</b> <br>
+        Fecha: {{ i.fecha }} <br>
+        Hora: {{ i.hora }} <br>
+        <ion-button (click)="verDetalle(i.id)">Ver detalle</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

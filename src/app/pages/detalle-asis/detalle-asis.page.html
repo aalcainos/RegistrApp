@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+      text="Volver"
+      defaultHref="/vis-asis">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list *ngIf="loaded">
+    <ion-list-header>
+      <ion-skeleton-text [animated]="true" style="width: 80px"></ion-skeleton-text>
+    </ion-list-header>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text [animated]="true" style="width: 80%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text [animated]="true" style="width: 30%;"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ng-container *ngIf="!loaded">
+    <ion-card *ngFor="let i of asisActual">
+      <ion-card-header>
+        <ion-card-title>Detalle de Asistencia</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+          Id de asistencia:  {{ i.id }} <br>
+          Lección: {{ i.leccion }} <br>
+          Asignatura: {{ i.asignatura }} <br>
+          Seccion: {{ i.seccion }} <br>
+          Docente: {{ i.docente }} <br>
+          Sala: {{ i.sala }} <br>
+          Fecha: {{ i.fecha }} <br>
+          Hora: {{ i.hora }} <br>
+          Usuario asosiado: {{ i.usuario }}
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+
+</ion-content>

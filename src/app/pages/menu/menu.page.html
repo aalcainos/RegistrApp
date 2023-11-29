@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>RegistrApp</ion-title>
+    <ion-button slot="end" (click)="logout()" color="dark"><ion-icon name="log-out-outline"></ion-icon></ion-button>
+    <ion-button (click)="abrirMenu()" slot="start">
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-icon (click)="closeMenu()" style="font-size: 30px;" name="close-outline" slot="end"></ion-icon>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item (click)="irAPerfil()">
+        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-label>Perfil de Usuario</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
+</div>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Escanear</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-button (click)="scaneo()" color="dark"><ion-icon name="qr-code-outline"></ion-icon>Registrar asistencia</ion-button>
+    </ion-card-content>
+  </ion-card>
+        
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Visualizar</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-button routerLink="/vis-asis" color="dark"><ion-icon name="eye-outline"></ion-icon>Entrar</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+
+    
+  
+</ion-content>
